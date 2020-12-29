@@ -1,5 +1,5 @@
 {
-    "name": "myAgenda",
+    "name": "kev1nnnnnnn/myAgenda",
     "authors": [
         {
             "name": "John Kevin",
@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-4": {
-            "": "vendor\\void\\php-classes\\src"
+            "Hcode\\": "vendor\\void\\php-classes\\src"
         }
     }
 }
