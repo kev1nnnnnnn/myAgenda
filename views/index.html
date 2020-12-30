@@ -1,0 +1,43 @@
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="box box-primary">
+			  
+			  <div class="box-header mb-4">
+				<a href="/create" class="btn btn-dark">Cadastrar Usuário</a>
+			  </div>
+  
+			  <div class="box-body no-padding">
+				<table class="table table-striped">
+				  <thead>
+					<tr>
+					  <th>#</th>
+					  <th>Nome</th>
+					  <th>E-mail</th>
+					  <th>login</th>
+					
+					</tr>
+				  </thead>
+				  <tbody>
+					{loop="$users"}
+					<tr>
+					  <td>{$value.iduser}</td>
+					  <td>{$value.desperson}</td>
+					  <td>{$value.desemail}</td>
+					  <td>{$value.deslogin}</td>			 
+					  <td>
+						<a href="/admin/users/{$value.iduser}" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a>
+						<a href="/admin/users/{$value.iduser}/delete" onclick="return confirm('Deseja realmente excluir este registro?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
+					  </td>
+					</tr>
+					{/loop}
+				  </tbody>
+				</table>
+			  </div>
+			  <!-- /.box-body -->
+			</div>
+		</div>
+	</div>
+</div>
+	
