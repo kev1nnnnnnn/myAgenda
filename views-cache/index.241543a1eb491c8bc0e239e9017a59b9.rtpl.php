@@ -5,7 +5,7 @@
 			<div class="box box-primary">
 			  
 			  <div class="box-header mb-4">
-				<a href="/create" class="btn btn-dark">Cadastrar Usuário</a>
+				<a href="/create" class="btn btn-dark">Cadastrar Contato</a>
 			  </div>
   
 			  <div class="box-body no-padding">
@@ -14,8 +14,8 @@
 					<tr>
 					  <th>#</th>
 					  <th>Nome</th>
-					  <th>E-mail</th>
-					
+					  <th>Telefone</th>
+					  <th>E-mail</th>					  					
 					</tr>
 				  </thead>
 				  <tbody>
@@ -23,10 +23,12 @@
 					<tr>
 					  <td><?php echo htmlspecialchars( $value1["iduser"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
 					  <td><?php echo htmlspecialchars( $value1["desperson"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
-					  <td><?php echo htmlspecialchars( $value1["desemail"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>			 
+					  <td><?php echo htmlspecialchars( $value1["nrphone"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>		
+					  <td><?php echo htmlspecialchars( $value1["desemail"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>	
+					   
 					  <td>
-						<a href="/admin/users/<?php echo htmlspecialchars( $value1["iduser"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a>
-						<a href="/admin/users/<?php echo htmlspecialchars( $value1["iduser"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/delete" onclick="return confirm('Deseja realmente excluir este registro?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
+						<a href="/<?php echo htmlspecialchars( $value1["iduser"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a>
+						<a href="/<?php echo htmlspecialchars( $value1["iduser"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/delete" onclick="return confirm('Deseja realmente excluir este registro?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
 					  </td>
 					</tr>
 					<?php } ?>

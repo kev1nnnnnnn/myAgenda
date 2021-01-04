@@ -4,7 +4,7 @@ namespace Hcode;
 
 class Model {
 
-	/*contem todos os dados e valores dos campos que temos em nosso objeto*/
+	/*contem todos os dados e valores dos campos que temos*/
 	private $values = []; 
 
 	public function __call($name, $args) {
@@ -23,7 +23,6 @@ class Model {
 				
 		}
 	}
-	
 
 	public function setData($data = array()) {
 

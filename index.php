@@ -13,13 +13,13 @@ $app->config('debug', true);
 
 $app->get('/', function() {
 
-	User::listAll();
+	$users = User::listAll();
 
 	$page = new Page();
 
 	$page->setTpl("index", array(
 		"users"=>$users
-	));
+	)); 
 
 });
 
@@ -48,6 +48,8 @@ $app->get('/logout', function() {
 
 $app->get('/create', function() {
 
+	User::verifyLogin();
+
 	$page = new Page([
 		"footer"=>false
 	]);
@@ -57,21 +59,66 @@ $app->get('/create', function() {
 
 $app->get('/:iduser/delete', function($iduser){
 
+	User::verifyLogin();
+
+	$user = new User();
+
+	$user->get((int)$iduser);
+
+	$user->delete();
+
+	header("Location: /");
+	exit;
+
 });
 
 $app->get('/:iduser', function($iduser) {
 
+	User::verifyLogin();
+	
+	$user = new User();
+
+	$user->get((int)$iduser);
+
 	$page = new Page();
 
-	$page->setTpl("update");
+	$page->setTpl("update", array(
+		"user"=>$user->getValues()
+	));
 });
 
 $app->post('/create', function() {
+	
+	User::verifyLogin();
 
+	$user = new User();
+
+	$_POST["inadmin"] = (isset($_POST["inadmin"]))?1:0;
+
+	$user->setData($_POST);
+
+	//executa o insert no banco
+	$user->save();
+
+	header("Location: /");
+	exit;
+	
 });
 
 $app->post('/:iduser', function($iduser){
+	
+	User::verifyLogin();
 
+	$user = new User();
+
+	$user->get((int)$iduser);
+
+	$user->setData($_POST);
+
+	$user->update();
+
+	header("Location: /");
+	exit;
 });
 
 

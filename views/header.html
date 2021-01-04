@@ -21,8 +21,11 @@
                   <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Contatos</a>
+                  <a class="nav-link" href="/">Contatos</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/create">Cadastro</a>
+                  </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/login">Login</a>
                   </li>
