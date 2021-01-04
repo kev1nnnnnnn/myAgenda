@@ -39,7 +39,7 @@ $app->post('/login', function() {
 });
 
 $app->get('/logout', function() {
-	
+
 	User::logout();
 	
 	header("Location: /login");
@@ -48,7 +48,6 @@ $app->get('/logout', function() {
 
 $app->get('/create', function() {
 
-	User::verifyLogin();
 
 	$page = new Page([
 		"footer"=>false
@@ -58,8 +57,6 @@ $app->get('/create', function() {
 });
 
 $app->get('/:iduser/delete', function($iduser){
-
-	User::verifyLogin();
 
 	$user = new User();
 
@@ -73,8 +70,6 @@ $app->get('/:iduser/delete', function($iduser){
 });
 
 $app->get('/:iduser', function($iduser) {
-
-	User::verifyLogin();
 	
 	$user = new User();
 
@@ -88,8 +83,6 @@ $app->get('/:iduser', function($iduser) {
 });
 
 $app->post('/create', function() {
-	
-	User::verifyLogin();
 
 	$user = new User();
 
@@ -106,8 +99,7 @@ $app->post('/create', function() {
 });
 
 $app->post('/:iduser', function($iduser){
-	
-	User::verifyLogin();
+
 
 	$user = new User();
 
