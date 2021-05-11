@@ -1,0 +1,55 @@
+.container-index {
+    margin-top: 10%;
+}
+
+.container-create form  {
+    margin-top: 8%;
+    padding: 45px;
+    background-image: linear-gradient( #131515,#131515,#2B2C28,#2B2C28,#2B2C28, #2B2C28);
+    border-radius: 10px;
+}
+
+textarea {
+    resize: none;
+}
+footer {
+    margin-top: 8.5em;
+    padding: 30px;  
+}
+footer p {
+    color: #fff;
+}
+footer a {
+    text-decoration: none; 
+    color: #eee;
+}
+footer a:hover {
+    color: #1B98E0;
+    text-decoration: none;
+    transition: 0.5s;
+}
+textarea {
+    resize: none;
+}
+.container-create input {
+    border: 1px solid black;
+}
+.container-create .btn {
+    border: 1px solid white;
+}
+
+.container-create {
+    background-color: black;
+    max-width: 80%;
+}
+.container-create {
+    color: white;
+    font-size: 18px;
+}
+
+.container-create img {
+
+    width: 400px;
+    height: auto;
+}
+

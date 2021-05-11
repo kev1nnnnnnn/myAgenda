@@ -1,42 +1,48 @@
-<div class="container">
-	<form role="form" action="/create" method="POST">
-		<div class="form-group">
-			  <label for="nome">Nome</label>
-			  <input type="text" class="form-control" aria-describedby="emailHelp" name="desperson" placeholder="digite seu nome">		  
-        </div>
-
+<div class="container container-create">
+  <div class="row m-auto">
+    <div class="col-md-5">
+      <form role="form form-c" action="/create" method="POST">
         <div class="form-group">
-            <label for="deslogin">Login</label>
-            <input type="text" class="form-control" placeholder="Digite seu Login" name="deslogin">
-      </div>
-        
-        <div class="form-group">
-			<label for="desphone">Telefone</label>
-			<input type="text" class="form-control" placeholder="Digite seu telefone" name="nrphone">
-        </div>
-  
-		<div class="form-group">
-			  <label for="desemail">Email</label>
-			  <input type="email" class="form-control" placeholder="Digite seu email" name="desemail">
-		</div>
-        
-        <div class="form-group">
-			<label for="despassword">Senha</label>
-			<input type="text" class="form-control" placeholder="Digite sua senha" name="despassword">
-        </div>
-        
-        <div class="form-group">
-            <label>
-              <input type="checkbox" name="inadmin" value="1"> Acesso de Administrador
-            </label>
+            <label for="nome">Nome</label>
+            <input type="text" class="form-control" aria-describedby="emailHelp" name="desperson" placeholder="digite seu nome">		  
+            </div>
+    
+            <div class="form-group">
+                <label for="deslogin">Login</label>
+                <input type="text" class="form-control" placeholder="Digite seu Login" name="deslogin">
           </div>
+            
+            <div class="form-group">
+          <label for="desphone">Telefone</label>
+          <input type="text" class="form-control" placeholder="Digite seu telefone" name="nrphone">
+            </div>
+      
+        <div class="form-group">
+            <label for="desemail">Email</label>
+            <input type="email" class="form-control" placeholder="Digite seu email" name="desemail">
+        </div>
+            
+            <div class="form-group">
+          <label for="despassword">Senha</label>
+          <input type="text" class="form-control" placeholder="Digite sua senha" name="despassword">
+            </div>
+            
+            <div class="form-group">
+                <label>
+                  <input type="checkbox" name="inadmin" value="1"> Acesso de Administrador
+                </label>
+              </div>
+    
+        <div class="form-group">
+          <input type="submit" class="btn btn-dark outline form-control col-md-12">
+        </div>     
+       </form>
+    </div>
+    <div class="col-md-7">  
 
-		<div class="form-group">
-			<input type="submit" class="btn btn-dark outline form-control col-md-2">
-		</div>
+      <img src="/assets/assets/img.jpg" alt="">
+
+    </div>
+  </div>
 	
-
-
-   
-   </form>
 </div>

@@ -1,7 +1,7 @@
 
-<div class="container">
+<div class="container .container-index mt-5">
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-md-8">
 			<div class="box box-primary">
 			  
 			  <div class="box-header mb-4">
@@ -25,19 +25,31 @@
 					  <td>{$value.desperson}</td>
 					  <td>{$value.nrphone}</td>		
 					  <td>{$value.desemail}</td>	
+					
 					   
 					  <td>
 						<a href="/{$value.iduser}" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a>
 						<a href="/{$value.iduser}/delete" onclick="return confirm('Deseja realmente excluir este registro?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
 					  </td>
 					</tr>
-					{/loop}
+				{/loop}
 				  </tbody>
 				</table>
 			  </div>
 			  <!-- /.box-body -->
 			</div>
 		</div>
+
+		<div class="col-4 text-center">
+			<h1>SEJA BEM VINDO!</h1>
+			<h4>Crie anotações importantes no seu dia dia...</h4>
+			<form action="/agenda" method="POST">	
+				<label for="nota">TAREFAS IMPORTANTES:</label>
+				<textarea class="form-control" name="destexto" id="" cols="40" rows="3"></textarea>
+				<input type="submit" class="btn btn-dark btn-outline form-control">
+			</form>
+			
 	</div>
+</div>
 </div>
 	

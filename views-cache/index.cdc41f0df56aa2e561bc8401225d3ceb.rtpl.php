@@ -5,7 +5,7 @@
 			<div class="box box-primary">
 			  
 			  <div class="box-header mb-4">
-				<a href="/create" class="btn btn-dark">Cadastrar Contato</a>
+				<a href="/create" class="btn btn-dark">Cadastrar Cliente</a>
 			  </div>
   
 			  <div class="box-body no-padding">

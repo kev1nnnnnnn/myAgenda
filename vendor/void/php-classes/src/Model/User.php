@@ -70,7 +70,7 @@ use \Hcode\Model;
 			");
 		}
 
-		//salvar os dados
+		//Salvar no banco ao criar contato
 		public function save()
 		{
 
@@ -89,6 +89,7 @@ use \Hcode\Model;
 
 		}
 
+		
 		//editar
 		public function get($iduser)
 		{
@@ -105,7 +106,7 @@ use \Hcode\Model;
 
 			$sql = new Sql();
 
-			$results = $sql->select("CALL sp_usersupdate_save(:iduser, :desperson, :deslogin, :despassword, :desemail, :nrphone, :inadmin)", array(
+			$results = $sql->select("CALL sp_usersupdate_save(:iduser, :desperson, :deslogin, :despassword, :desemail, :nrphone, :inadmin, :destexto)", array(
 				":iduser"=>$this->getiduser(),
 				":desperson"=>$this->getdesperson(),
 				":deslogin"=>$this->getdeslogin(),
@@ -128,4 +129,5 @@ use \Hcode\Model;
 	}
 
 	}
+
 ?>

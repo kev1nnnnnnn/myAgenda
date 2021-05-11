@@ -5,6 +5,7 @@ require_once("vendor/autoload.php");
 use \Slim\Slim;
 use \Hcode\Page;
 use \Hcode\Model\User;
+use \Hcode\Model\Message;
 
 $app = new Slim();
 
@@ -20,6 +21,34 @@ $app->get('/', function() {
 	$page->setTpl("index", array(
 		"users"=>$users
 	)); 
+
+});
+
+$app->get('/agenda', function(){
+
+$msg = Message::listText();
+
+$page = new Page([
+		"footer"=>false
+	]);
+
+$page->setTpl("agenda",array(
+	"msg"=>$msg
+	));
+});
+
+$app->post('/agenda', function() {
+
+	$msg = new Message();
+
+	$msg->setData($_POST);
+
+	$msg->saveM();
+
+	header("Location: /agenda");
+	exit;
+
+	
 
 });
 
